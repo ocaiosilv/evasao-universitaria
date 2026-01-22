@@ -5,6 +5,7 @@
 !.envrc
 !.github
 !.gitignore
+!.python-version
 
 # Adicionado automaticamente.
 .Rproj.user
