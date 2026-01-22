@@ -370,7 +370,7 @@ draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-
 </front-stub>
 
 <body>
-<sec id="cell-815b6475-nb-article" specific-use="notebook-content">
+<sec id="ac0bd2f8-nb-article" specific-use="notebook-content">
 <p>title: Análise de Evasão Universitária usando Polars authors: - name:
 Caio Aloísio Andrade Silva affiliation: Universidade Federal de Sergipe
 roles: writing corresponding: true - name: Gabriel Santos de Souza
@@ -390,7 +390,7 @@ associacao-brasileira-de-normas-tecnicas-ufs.csl —</p>
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
   </sec>
-  <sec id="cell-719be311-nb-article" specific-use="notebook-content">
+  <sec id="cell-4dc5c866-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
