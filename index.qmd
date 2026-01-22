@@ -14,7 +14,7 @@ bibliography: references.bib
 csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
 jupyter: python3
 lang: pt
-title: Análise de Evasão Universitária usando Polars
+title: Análise de Evasão Universitária
 ---
 
 # Seção
