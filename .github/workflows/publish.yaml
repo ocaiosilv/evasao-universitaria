@@ -15,6 +15,8 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Set Up Quarto
         uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b
+        with:
+          tinytex: true
       - name: Install Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
@@ -24,7 +26,6 @@ jobs:
         run: |
           pip install jupyter
           pip install -r requirements.txt
-          sudo apt install texlive-full -y
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b
         with:
