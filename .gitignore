@@ -7,6 +7,12 @@
 !.gitignore
 !.python-version
 
+# Arquivos gerados pelo Quarto.
+_freeze
+_manuscript
+index-preview.html
+site_libs
+
 # Adicionado automaticamente.
 .Rproj.user
 /env/
