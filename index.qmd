@@ -1,24 +1,6 @@
 ---
-author:
-  - name: Caio Aloísio Andrade Silva
-    affiliation: Universidade Federal de Sergipe
-  - name: Gabriel Santos de Souza
-    affiliation: Universidade Federal de Sergipe
-  - name: Lucca Pedreira Dultra
-    affiliation: Universidade Federal de Sergipe
-  - name: Renato Vasconcelos Campos Filho
-    affiliation: Universidade Federal de Sergipe
-  - name: Tarcísio Almeida Mascarenhas
-    affiliation: Universidade Federal de Sergipe
-bibliography: references.bib
-csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
-jupyter: python3
-lang: pt
-# Coloca todas as entradas na referência independente de se foram citadas ou
-# não.
-nocite: |
-  @*
-title: Análise de Evasão Universitária
+format:
+  html: default
 ---
 
 ## Introdução
