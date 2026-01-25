@@ -12,7 +12,7 @@ author:
 
 bibliography: references.bib
 
-csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
+csl: associacao-brasileira-de-normas-tecnicas.csl
 
 editor: visual
 
@@ -26,6 +26,7 @@ project:
   type: manuscript
 
 format:
+  html: default
   pdf: default
   revealjs:
     theme: default
