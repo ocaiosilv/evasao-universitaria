@@ -14,6 +14,10 @@ bibliography: references.bib
 csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
 jupyter: python3
 lang: pt
+# Coloca todas as entradas na referência independente de se foram citadas ou
+# não.
+nocite: |
+  @*
 title: Análise de Evasão Universitária
 ---
 
