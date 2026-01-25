@@ -1,17 +1,43 @@
-project:
-  type: manuscript
+author:
+  - name: Caio Aloísio Andrade Silva
+    affiliation: Universidade Federal de Sergipe
+  - name: Gabriel Santos de Souza
+    affiliation: Universidade Federal de Sergipe
+  - name: Lucca Pedreira Dultra
+    affiliation: Universidade Federal de Sergipe
+  - name: Renato Vasconcelos Campos Filho
+    affiliation: Universidade Federal de Sergipe
+  - name: Tarcísio Almeida Mascarenhas
+    affiliation: Universidade Federal de Sergipe
 
-manuscript:
-  article: index.qmd
+bibliography: references.bib
 
-format:
-  html: default
-  docx: default
-  jats: default
-  pdf: default
+csl: associacao-brasileira-de-normas-tecnicas-ufs.csl
+
+editor: visual
 
 execute:
   freeze: true
 
-editor: visual
+manuscript:
+  article: index.qmd
 
+project:
+  type: manuscript
+
+format:
+  pdf: default
+  revealjs:
+    theme: default
+  docx: default
+
+lang: pt
+
+jupyter: python3
+
+# Coloca todas as entradas na referência independente de se foram citadas ou
+# não.
+nocite: |
+  @*
+
+title: Análise de Evasão Universitária
