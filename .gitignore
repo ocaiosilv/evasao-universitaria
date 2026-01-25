@@ -12,6 +12,10 @@ _freeze
 _manuscript
 index-preview.html
 site_libs
+*.aux
+*.log
+*.tex
+*.pdf
 
 # Adicionado automaticamente.
 .Rproj.user
