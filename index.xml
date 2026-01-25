@@ -242,11 +242,14 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <sec id="conclusão">
   <title>Conclusão</title>
 </sec>
+<sec id="relato-pessoal">
+  <title>Relato Pessoal</title>
+</sec>
 </body>
 
 <back>
 <ref-list>
-  <title>Relato Pessoal</title>
+  <title>Referências</title>
   <ref id="ref-knuth84">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -452,7 +455,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
   1984</xref>). Knuth
   (<xref alt="1984" rid="ref-knuth84-nb-article" ref-type="bibr">1984</xref>) fala
   sobre <italic>Literate Programming</italic>.</p>
-  <sec id="ac0ba65a-nb-article" specific-use="notebook-content">
+  <sec id="c16f5bfd-nb-article" specific-use="notebook-content">
   <code language="python">from ucimlrepo import fetch_ucirepo
 
 # fetch dataset
@@ -587,7 +590,7 @@ print(predict_students_dropout_and_academic_success.variables)</code>
 36             no  </preformat>
   </boxed-text>
   </sec>
-  <sec id="e13d806a-nb-article" specific-use="notebook-content">
+  <sec id="cell-13575547-nb-article" specific-use="notebook-content">
 </sec>
 <sec id="objetivo-nb-article">
   <title>Objetivo</title>
@@ -614,6 +617,9 @@ print(predict_students_dropout_and_academic_success.variables)</code>
 </sec>
 <sec id="relato-pessoal-nb-article">
   <title>Relato Pessoal</title>
+</sec>
+<sec id="referências-nb-article">
+  <title>Referências</title>
   </sec>
 </sec>
 </body>
