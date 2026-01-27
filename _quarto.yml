@@ -40,5 +40,3 @@ jupyter: python3
 # não.
 nocite: |
   @*
-
-title: Análise de Evasão Universitária

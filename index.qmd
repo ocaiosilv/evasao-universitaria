@@ -1,9 +1,7 @@
 ---
-title: "Análise da Evasão Universitária"
-title-block: false
 format: html
+title: Análise de Evasão Universitária
 ---
-
 
 ## Introdução
 
