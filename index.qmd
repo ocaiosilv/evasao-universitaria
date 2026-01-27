@@ -1,9 +1,7 @@
 ---
-title: "Análise da Evasão Universitária"
-title-block: false
 format: html
+title: Análise de Evasão Universitária
 ---
-
 
 ## Introdução
 
@@ -11,7 +9,7 @@ A evasão universitária é um fenômeno complexo que impacta tanto as institui�
 
 Neste trabalho, investigamos o problema da desistência no ensino superior utilizando dados reais. A análise se justifica pela necessidade de identificar padrões ocultos que possam sinalizar, precocemente, estudantes em situação de risco.
 
-Para isso, utilizamos o conjunto de dados *Predict Students' Dropout and Academic Success*, disponibilizado pelo UCI Machine Learning Repository. Os dados provêm de uma instituição de ensino superior (Politécnico de Portalegre, Portugal) e englobam diversas dimensões da vida estudantil, incluindo fatores demográficos, socioeconômicos e de desempenho acadêmico prévio. A natureza dos dados é mista, contendo variáveis qualitativas (como estado civil e curso) e quantitativas (como notas e idade), permitindo uma análise estatística rica e multifacetada.
+Para isso, utilizamos o conjunto de dados *Predict Students' Dropout and Academic Success*, disponível no *UCI Machine Learning Repository* [@martinsEarlyPredictionStudents2021]. Os dados provêm de uma instituição de ensino superior (Politécnico de Portalegre, Portugal) e englobam diversas dimensões da vida estudantil, incluindo fatores demográficos, socioeconômicos e de desempenho acadêmico prévio. A natureza dos dados é mista, contendo variáveis qualitativas (como estado civil e curso) e quantitativas (como notas e idade), permitindo uma análise estatística rica e multifacetada.
 
 ## Objetivo
 
@@ -19,14 +17,14 @@ O objetivo principal deste trabalho é aplicar técnicas de estatística descrit
 
 Para alcançar este propósito, definiram-se os seguintes objetivos específicos:
 
-1.  **Resumir e Organizar:** Sintetizar as variáveis quantitativas do conjunto de dados, calculando medidas de tendência central (média, mediana) e dispersão (desvio padrão) para as notas de qualificação prévia.
-2.  **Visualizar:** Construir representações gráficas, como histogramas e boxplots, para facilitar a interpretação da distribuição das idades e notas dos alunos.
-3.  **Identificar Anomalias:** Detectar a presença de *outliers* (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.
-4.  **Caracterizar:** Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.
+1. **Resumir e Organizar:** Sintetizar as variáveis quantitativas do conjunto de dados, calculando medidas de tendência central (média, mediana) e dispersão (desvio padrão) para as notas de qualificação prévia.
+2. **Visualizar:** Construir representações gráficas, como histogramas e *boxplots*, para facilitar a interpretação da distribuição das idades e notas dos alunos.
+3. **Identificar Anomalias:** Detectar a presença de *outliers* (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.
+4. **Caracterizar:** Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.
 
 ## Materiais e Métodos
 
-O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), de Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.
+O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados.
 
 ```{python}
 #| include: false
