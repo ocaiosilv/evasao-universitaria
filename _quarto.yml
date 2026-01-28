@@ -28,8 +28,6 @@ project:
 format:
   html: default
   pdf: default
-  revealjs:
-    theme: default
   docx: default
 
 lang: pt
