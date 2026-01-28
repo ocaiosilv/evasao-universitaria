@@ -3,6 +3,27 @@ format: html
 title: Análise de Evasão Universitária
 ---
 
+```{python}
+#| include: false
+#| label: imports
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+from ucimlrepo import fetch_ucirepo
+```
+
+```{python}
+#| include: false
+#| label: variables
+
+# Dataset.
+ds = fetch_ucirepo(id=697)
+# DataFrame.
+df = ds.data.features
+```
+
 ## Introdução
 
 A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.
@@ -27,22 +48,8 @@ Para alcançar este propósito, definiram-se os seguintes objetivos específicos
 O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados. A tabela a seguir detalha as variáveis encontradas no *dataset*, e seus tipos.
 
 ```{python}
-#| include: false
-from ucimlrepo import fetch_ucirepo
-
-# fetch dataset
-predict_students_dropout_and_academic_success = fetch_ucirepo(id=697)
-
-# Definindo o df
-df = predict_students_dropout_and_academic_success.data.features
-```
-
-```{python}
 #| label: tbl-variaveis
-#| tbl-cap: "Dicionário das Variáveis"
-
-import numpy as np
-import pandas as pd
+#| tbl-cap: Dicionário das Variáveis
 
 def classificar_variavel(coluna):
     """
@@ -97,20 +104,18 @@ Para o processamento e análise dos dados mediante gráficos, foi utilizada a li
 
 ```{python}
 #| label: tbl-estatisticas
-#| tbl-cap: "Estatísticas Descritivas das Notas"
+#| tbl-cap: Estatísticas Descritivas das Notas
 
 # Calculando as estatísticas
 descritiva = df['Previous qualification (grade)'].describe()
 
-# Mostrando a tabela formatada
+# Mostrando a tabela formatada.
 descritiva.to_frame().style.format("{:.2f}")
 ```
 
 ```{python}
 #| label: fig-boxplot-notas
-#| fig-cap: "Distribuição das Notas (Identificando Outliers)"
-
-import matplotlib.pyplot as plt
+#| fig-cap: Distribuição das Notas (Identificando Outliers)
 
 plt.figure(figsize=(8, 4))
 plt.boxplot(df['Previous qualification (grade)'], vert=False, patch_artist=True)
@@ -119,6 +124,7 @@ plt.xlabel('Nota')
 plt.grid(True, linestyle='--', alpha=0.6)
 plt.show()
 ```
+
 ### Análise dos Resultados
 
 Com base na **Tabela 1**, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente **132.6 pontos**, com uma mediana muito próxima (**133.1**), o que indica uma distribuição relativamente simétrica.
