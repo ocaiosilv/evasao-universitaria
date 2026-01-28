@@ -14,6 +14,16 @@ import pandas as pd
 from ucimlrepo import fetch_ucirepo
 ```
 
+```{python}
+#| include: false
+#| label: variables
+
+# Dataset.
+ds = fetch_ucirepo(id=697)
+# DataFrame.
+df = ds.data.features
+```
+
 ## Introdução
 
 A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.
@@ -36,16 +46,6 @@ Para alcançar este propósito, definiram-se os seguintes objetivos específicos
 ## Materiais e Métodos
 
 O dataset utilizado, *Predict Students' Dropout and Academic Success* tem como origem o Instituto Politécnico de Portalegre (PP), Portugal [@martinsEarlyPredictionStudents2021, p. 167]. Os dados foram coletados desde 2008 até 2019 [@martinsEarlyPredictionStudents2021, p. 168]. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados. A tabela a seguir detalha as variáveis encontradas no *dataset*, e seus tipos.
-
-```{python}
-#| include: false
-
-# Baixando o Dataset.
-ds = fetch_ucirepo(id=697)
-
-# Definindo o DataFrame.
-df = ds.data.features
-```
 
 ```{python}
 #| label: tbl-variaveis
@@ -124,6 +124,7 @@ plt.xlabel('Nota')
 plt.grid(True, linestyle='--', alpha=0.6)
 plt.show()
 ```
+
 ### Análise dos Resultados
 
 Com base na **Tabela 1**, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente **132.6 pontos**, com uma mediana muito próxima (**133.1**), o que indica uma distribuição relativamente simétrica.
