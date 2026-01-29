@@ -309,312 +309,7 @@
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># DataFrame.</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> ds.data.original</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="1cf59411" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Marital Status</th>
-<th data-quarto-table-cell-role="th">Application mode</th>
-<th data-quarto-table-cell-role="th">Application order</th>
-<th data-quarto-table-cell-role="th">Course</th>
-<th data-quarto-table-cell-role="th">Daytime/evening attendance</th>
-<th data-quarto-table-cell-role="th">Previous qualification</th>
-<th data-quarto-table-cell-role="th">Previous qualification (grade)</th>
-<th data-quarto-table-cell-role="th">Nacionality</th>
-<th data-quarto-table-cell-role="th">Mother's qualification</th>
-<th data-quarto-table-cell-role="th">Father's qualification</th>
-<th data-quarto-table-cell-role="th">...</th>
-<th data-quarto-table-cell-role="th">Curricular units 2nd sem (credited)</th>
-<th data-quarto-table-cell-role="th">Curricular units 2nd sem (enrolled)</th>
-<th data-quarto-table-cell-role="th">Curricular units 2nd sem (evaluations)</th>
-<th data-quarto-table-cell-role="th">Curricular units 2nd sem (approved)</th>
-<th data-quarto-table-cell-role="th">Curricular units 2nd sem (grade)</th>
-<th data-quarto-table-cell-role="th">Curricular units 2nd sem (without evaluations)</th>
-<th data-quarto-table-cell-role="th">Unemployment rate</th>
-<th data-quarto-table-cell-role="th">Inflation rate</th>
-<th data-quarto-table-cell-role="th">GDP</th>
-<th data-quarto-table-cell-role="th">Target</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">0</th>
-<td>1</td>
-<td>17</td>
-<td>5</td>
-<td>171</td>
-<td>1</td>
-<td>1</td>
-<td>122.0</td>
-<td>1</td>
-<td>19</td>
-<td>12</td>
-<td>...</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
-<td>0</td>
-<td>10.8</td>
-<td>1.4</td>
-<td>1.74</td>
-<td>Dropout</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">1</th>
-<td>1</td>
-<td>15</td>
-<td>1</td>
-<td>9254</td>
-<td>1</td>
-<td>1</td>
-<td>160.0</td>
-<td>1</td>
-<td>1</td>
-<td>3</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>6</td>
-<td>6</td>
-<td>13.666667</td>
-<td>0</td>
-<td>13.9</td>
-<td>-0.3</td>
-<td>0.79</td>
-<td>Graduate</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2</th>
-<td>1</td>
-<td>1</td>
-<td>5</td>
-<td>9070</td>
-<td>1</td>
-<td>1</td>
-<td>122.0</td>
-<td>1</td>
-<td>37</td>
-<td>37</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>0</td>
-<td>0</td>
-<td>0.000000</td>
-<td>0</td>
-<td>10.8</td>
-<td>1.4</td>
-<td>1.74</td>
-<td>Dropout</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">3</th>
-<td>1</td>
-<td>17</td>
-<td>2</td>
-<td>9773</td>
-<td>1</td>
-<td>1</td>
-<td>122.0</td>
-<td>1</td>
-<td>38</td>
-<td>37</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>10</td>
-<td>5</td>
-<td>12.400000</td>
-<td>0</td>
-<td>9.4</td>
-<td>-0.8</td>
-<td>-3.12</td>
-<td>Graduate</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4</th>
-<td>2</td>
-<td>39</td>
-<td>1</td>
-<td>8014</td>
-<td>0</td>
-<td>1</td>
-<td>100.0</td>
-<td>1</td>
-<td>37</td>
-<td>38</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>6</td>
-<td>6</td>
-<td>13.000000</td>
-<td>0</td>
-<td>13.9</td>
-<td>-0.3</td>
-<td>0.79</td>
-<td>Graduate</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4419</th>
-<td>1</td>
-<td>1</td>
-<td>6</td>
-<td>9773</td>
-<td>1</td>
-<td>1</td>
-<td>125.0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>8</td>
-<td>5</td>
-<td>12.666667</td>
-<td>0</td>
-<td>15.5</td>
-<td>2.8</td>
-<td>-4.06</td>
-<td>Graduate</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">4420</th>
-<td>1</td>
-<td>1</td>
-<td>2</td>
-<td>9773</td>
-<td>1</td>
-<td>1</td>
-<td>120.0</td>
-<td>105</td>
-<td>1</td>
-<td>1</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>6</td>
-<td>2</td>
-<td>11.000000</td>
-<td>0</td>
-<td>11.1</td>
-<td>0.6</td>
-<td>2.02</td>
-<td>Dropout</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4421</th>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>9500</td>
-<td>1</td>
-<td>1</td>
-<td>154.0</td>
-<td>1</td>
-<td>37</td>
-<td>37</td>
-<td>...</td>
-<td>0</td>
-<td>8</td>
-<td>9</td>
-<td>1</td>
-<td>13.500000</td>
-<td>0</td>
-<td>13.9</td>
-<td>-0.3</td>
-<td>0.79</td>
-<td>Dropout</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">4422</th>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>9147</td>
-<td>1</td>
-<td>1</td>
-<td>180.0</td>
-<td>1</td>
-<td>37</td>
-<td>37</td>
-<td>...</td>
-<td>0</td>
-<td>5</td>
-<td>6</td>
-<td>5</td>
-<td>12.000000</td>
-<td>0</td>
-<td>9.4</td>
-<td>-0.8</td>
-<td>-3.12</td>
-<td>Graduate</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">4423</th>
-<td>1</td>
-<td>10</td>
-<td>1</td>
-<td>9773</td>
-<td>1</td>
-<td>1</td>
-<td>152.0</td>
-<td>22</td>
-<td>38</td>
-<td>37</td>
-<td>...</td>
-<td>0</td>
-<td>6</td>
-<td>6</td>
-<td>6</td>
-<td>13.000000</td>
-<td>0</td>
-<td>12.7</td>
-<td>3.7</td>
-<td>-1.70</td>
-<td>Graduate</td>
-</tr>
-</tbody>
-</table>
-
-<p>4424 rows × 37 columns</p>
-</div>
-</div>
-</div></div>
-<div id="92201876" class="cell markdown">
+<div id="0bb6c7b7" class="cell markdown">
 <section id="introdução" class="level2">
 <h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.</p>
@@ -637,53 +332,53 @@
 <p>O dataset utilizado, <em>Predict Students’ Dropout and Academic Success</em> tem como origem o Instituto Politécnico de Portalegre (PP), Portugal <span class="citation" data-cites="martinsEarlyPredictionStudents2021">(<a href="#ref-martinsEarlyPredictionStudents2021" role="doc-biblioref">Martins et al., 2021, p. 167</a>)</span>. Os dados foram coletados desde 2008 até 2019 <span class="citation" data-cites="martinsEarlyPredictionStudents2021">(<a href="#ref-martinsEarlyPredictionStudents2021" role="doc-biblioref">Martins et al., 2021, p. 168</a>)</span>. Foi selecionado devido à relevância acadêmia e por não ter valores faltando em nenhuma das colunas, facilitando o processo de tratamento para a análise dos dados. A tabela a seguir detalha as variáveis encontradas no <em>dataset</em>, e seus tipos.</p>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classificar_variavel(coluna):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Classifica o tipo de variável e escala, obedecendo exceções.</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    dtype <span class="op">=</span> coluna.dtype</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    n_unicos <span class="op">=</span> coluna.nunique()</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    nome <span class="op">=</span> coluna.name</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    excecoes <span class="op">=</span> [</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Nacionality'</span>,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Mother's occupation"</span>,</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Father's occupation"</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> dtype <span class="op">==</span> <span class="st">'string'</span>:</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'Qualitativa'</span>, <span class="st">'Nominal'</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.issubdtype(dtype, np.floating):</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'Quantitativa'</span>, <span class="st">'Contínua'</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.issubdtype(dtype, np.integer):</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Se tiver menos de 20 valores únicos, então é uma categoria</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># (Estado Civil, Curso, Idade...)</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (nome <span class="kw">in</span> excecoes) <span class="kw">or</span> (n_unicos <span class="op">&lt;</span> <span class="dv">20</span>):</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'Qualitativa'</span>, <span class="st">'Nominal'</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'Qualitativa'</span>, <span class="st">'Discreta'</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'Outro'</span>, <span class="st">'Outro'</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>dados_auto <span class="op">=</span> []</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col_name <span class="kw">in</span> df.columns:</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    tipo, escala <span class="op">=</span> classificar_variavel(df[col_name])</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    dados_auto.append({</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Variável'</span>: col_name,</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Tipo inferido'</span>: tipo,</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Escala Inferida'</span>: escala</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(dados_auto)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="tbl-variaveis" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classificar_variavel(coluna):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Classifica o tipo de variável e escala, obedecendo exceções.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    dtype <span class="op">=</span> coluna.dtype</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    n_unicos <span class="op">=</span> coluna.nunique()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    nome <span class="op">=</span> coluna.name</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    excecoes <span class="op">=</span> [</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Nacionality'</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Mother's occupation"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Father's occupation"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> dtype <span class="op">==</span> <span class="st">'string'</span>:</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'Qualitativa'</span>, <span class="st">'Nominal'</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.issubdtype(dtype, np.floating):</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'Quantitativa'</span>, <span class="st">'Contínua'</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.issubdtype(dtype, np.integer):</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Se tiver menos de 20 valores únicos, então é uma categoria</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># (Estado Civil, Curso, Idade...)</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (nome <span class="kw">in</span> excecoes) <span class="kw">or</span> (n_unicos <span class="op">&lt;</span> <span class="dv">20</span>):</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'Qualitativa'</span>, <span class="st">'Nominal'</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="st">'Qualitativa'</span>, <span class="st">'Discreta'</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'Outro'</span>, <span class="st">'Outro'</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>dados_auto <span class="op">=</span> []</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col_name <span class="kw">in</span> df.columns:</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    tipo, escala <span class="op">=</span> classificar_variavel(df[col_name])</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    dados_auto.append({</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Variável'</span>: col_name,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Tipo inferido'</span>: tipo,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Escala Inferida'</span>: escala</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(dados_auto)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="tbl-variaveis" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="3">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variaveis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabela&nbsp;1: Dicionário das Variáveis
 </figcaption>
 <div aria-describedby="tbl-variaveis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -928,7 +623,7 @@ Tabela&nbsp;1: Dicionário das Variáveis
 </figure>
 </div></div>
 </div></div>
-<div id="30e840f9" class="cell markdown">
+<div id="fc83f36f" class="cell markdown">
 <p>Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python <span class="citation" data-cites="python">(<a href="#ref-python" role="doc-biblioref">Python Software Foundation, 2025</a>)</span>. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.</p>
 <div id="tbl-libraries" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -969,61 +664,61 @@ Tabela&nbsp;2: Bibliotecas Utilizadas
 <h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculando as estatísticas</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>descritiva <span class="op">=</span> df[<span class="st">'Previous qualification (grade)'</span>].describe()</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrando a tabela formatada.</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>descritiva.to_frame().style.<span class="bu">format</span>(<span class="st">"</span><span class="sc">{:.2f}</span><span class="st">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="tbl-estatisticas" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="5">
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculando as estatísticas</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>descritiva <span class="op">=</span> df[<span class="st">'Previous qualification (grade)'</span>].describe()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrando a tabela formatada.</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>descritiva.to_frame().style.<span class="bu">format</span>(<span class="st">"</span><span class="sc">{:.2f}</span><span class="st">"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="tbl-estatisticas" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-estatisticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabela&nbsp;3: Estatísticas Descritivas das Notas
 </figcaption>
 <div aria-describedby="tbl-estatisticas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <style type="text/css">
 </style>
 
-<table id="T_95064" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table id="T_d15c5" class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_95064_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
+<th id="T_d15c5_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th id="T_95064_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
-<td id="T_95064_row0_col0" class="data row0 col0">4424.00</td>
+<th id="T_d15c5_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
+<td id="T_d15c5_row0_col0" class="data row0 col0">4424.00</td>
 </tr>
 <tr class="even">
-<th id="T_95064_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
-<td id="T_95064_row1_col0" class="data row1 col0">132.61</td>
+<th id="T_d15c5_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
+<td id="T_d15c5_row1_col0" class="data row1 col0">132.61</td>
 </tr>
 <tr class="odd">
-<th id="T_95064_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
-<td id="T_95064_row2_col0" class="data row2 col0">13.19</td>
+<th id="T_d15c5_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
+<td id="T_d15c5_row2_col0" class="data row2 col0">13.19</td>
 </tr>
 <tr class="even">
-<th id="T_95064_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
-<td id="T_95064_row3_col0" class="data row3 col0">95.00</td>
+<th id="T_d15c5_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
+<td id="T_d15c5_row3_col0" class="data row3 col0">95.00</td>
 </tr>
 <tr class="odd">
-<th id="T_95064_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
-<td id="T_95064_row4_col0" class="data row4 col0">125.00</td>
+<th id="T_d15c5_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
+<td id="T_d15c5_row4_col0" class="data row4 col0">125.00</td>
 </tr>
 <tr class="even">
-<th id="T_95064_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
-<td id="T_95064_row5_col0" class="data row5 col0">133.10</td>
+<th id="T_d15c5_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
+<td id="T_d15c5_row5_col0" class="data row5 col0">133.10</td>
 </tr>
 <tr class="odd">
-<th id="T_95064_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
-<td id="T_95064_row6_col0" class="data row6 col0">140.00</td>
+<th id="T_d15c5_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
+<td id="T_d15c5_row6_col0" class="data row6 col0">140.00</td>
 </tr>
 <tr class="even">
-<th id="T_95064_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
-<td id="T_95064_row7_col0" class="data row7 col0">190.00</td>
+<th id="T_d15c5_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
+<td id="T_d15c5_row7_col0" class="data row7 col0">190.00</td>
 </tr>
 </tbody>
 </table>
@@ -1032,13 +727,13 @@ Tabela&nbsp;3: Estatísticas Descritivas das Notas
 </figure>
 </div></div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="cell-fig-boxplot-notas" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.boxplot(df[<span class="st">'Previous qualification (grade)'</span>], vert<span class="op">=</span><span class="va">False</span>, patch_artist<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot: Notas de Qualificação Prévia'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Nota'</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-fig-boxplot-notas" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.boxplot(df[<span class="st">'Previous qualification (grade)'</span>], vert<span class="op">=</span><span class="va">False</span>, patch_artist<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot: Notas de Qualificação Prévia'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Nota'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-boxplot-notas" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1052,21 +747,21 @@ Figura&nbsp;1: Distribuição das Notas (Identificando Outliers)
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [7]:</pre></div><div id="cell-fig-bar-divida" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>com_divida <span class="op">=</span> df[df[<span class="st">'Target'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sem_divida <span class="op">=</span> df[df[<span class="st">'Target'</span>] <span class="op">==</span> <span class="dv">0</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>taxa_com_divida <span class="op">=</span> (com_divida[<span class="st">'Target'</span>] <span class="op">==</span> <span class="st">'Dropout'</span>).mean() <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>taxa_sem_divida <span class="op">=</span> (sem_divida[<span class="st">'Target'</span>] <span class="op">==</span> <span class="st">'Dropout'</span>).mean() <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>categorias <span class="op">=</span> [<span class="st">'Sem Dívida'</span>, <span class="st">'Com Dívida'</span>]</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>valores <span class="op">=</span> [taxa_sem_divida, taxa_com_divida]</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>plt.bar(categorias, valores, color<span class="op">=</span>[<span class="st">'blue'</span>, <span class="st">'red'</span>])</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Taxa de Evasão por Situação de Dívida'</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'</span><span class="sc">% d</span><span class="st">e Evasão'</span>)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="cell-fig-bar-divida" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>com_divida <span class="op">=</span> df[df[<span class="st">'Target'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sem_divida <span class="op">=</span> df[df[<span class="st">'Target'</span>] <span class="op">==</span> <span class="dv">0</span>]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>taxa_com_divida <span class="op">=</span> (com_divida[<span class="st">'Target'</span>] <span class="op">==</span> <span class="st">'Dropout'</span>).mean() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>taxa_sem_divida <span class="op">=</span> (sem_divida[<span class="st">'Target'</span>] <span class="op">==</span> <span class="st">'Dropout'</span>).mean() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>categorias <span class="op">=</span> [<span class="st">'Sem Dívida'</span>, <span class="st">'Com Dívida'</span>]</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>valores <span class="op">=</span> [taxa_sem_divida, taxa_com_divida]</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>plt.bar(categorias, valores, color<span class="op">=</span>[<span class="st">'blue'</span>, <span class="st">'red'</span>])</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Taxa de Evasão por Situação de Dívida'</span>)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'</span><span class="sc">% d</span><span class="st">e Evasão'</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="fig-bar-divida" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1080,7 +775,7 @@ Figura&nbsp;2: Taxa de Evasão por Situação de Dívida
 </div>
 </div>
 </div></div>
-<div id="fb574901" class="cell markdown">
+<div id="c03f92f8" class="cell markdown">
 <section id="análise-dos-resultados" class="level3">
 <h3 class="anchored" data-anchor-id="análise-dos-resultados">Análise dos Resultados</h3>
 <p>Com base na <a href="#tbl-estatisticas" class="quarto-xref">Tabela&nbsp;3</a>, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente <strong>132.6 pontos</strong>, com uma mediana muito próxima (<strong>133.1</strong>), o que indica uma distribuição relativamente simétrica.</p>

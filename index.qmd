@@ -24,10 +24,6 @@ ds = fetch_ucirepo(id=697)
 df = ds.data.original
 ```
 
-```{python}
-df
-```
-
 ## Introdução
 
 A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.
