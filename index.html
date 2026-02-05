@@ -67,6 +67,35 @@ div.csl-indent {
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta name="citation_title" content="Análise de Evasão Universitária">
 <meta name="citation_author" content="Caio Aloísio Andrade Silva">
@@ -237,6 +266,7 @@ Tabela&nbsp;1: Dicionário das Variáveis
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th">Variável</th>
+<th data-quarto-table-cell-role="th">Descrição</th>
 <th data-quarto-table-cell-role="th">Tipo inferido</th>
 <th data-quarto-table-cell-role="th">Escala Inferida</th>
 </tr>
@@ -245,215 +275,251 @@ Tabela&nbsp;1: Dicionário das Variáveis
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0</th>
 <td>Marital Status</td>
+<td>1 – single 2 – married 3 – widower 4 – divorce...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">1</th>
 <td>Application mode</td>
+<td>1 - 1st phase - general contingent 2 - Ordinan...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2</th>
 <td>Application order</td>
+<td>Application order (between 0 - first choice; a...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">3</th>
 <td>Course</td>
+<td>33 - Biofuel Production Technologies 171 - Ani...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">4</th>
 <td>Daytime/evening attendance</td>
+<td>1 – daytime 0 - evening</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">5</th>
 <td>Previous qualification</td>
+<td>1 - Secondary education 2 - Higher education -...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">6</th>
 <td>Previous qualification (grade)</td>
+<td>Grade of previous qualification (between 0 and...</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">7</th>
 <td>Nacionality</td>
+<td>1 - Portuguese; 2 - German; 6 - Spanish; 11 - ...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">8</th>
 <td>Mother's qualification</td>
+<td>1 - Secondary Education - 12th Year of Schooli...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">9</th>
 <td>Father's qualification</td>
+<td>1 - Secondary Education - 12th Year of Schooli...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">10</th>
 <td>Mother's occupation</td>
+<td>0 - Student 1 - Representatives of the Legisla...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">11</th>
 <td>Father's occupation</td>
+<td>0 - Student 1 - Representatives of the Legisla...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">12</th>
 <td>Admission grade</td>
+<td>Admission grade (between 0 and 200)</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">13</th>
 <td>Displaced</td>
+<td>1 – yes 0 – no</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">14</th>
 <td>Educational special needs</td>
+<td>1 – yes 0 – no</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">15</th>
 <td>Debtor</td>
+<td>1 – yes 0 – no</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">16</th>
 <td>Tuition fees up to date</td>
+<td>1 – yes 0 – no</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">17</th>
 <td>Gender</td>
+<td>1 – male 0 – female</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">18</th>
 <td>Scholarship holder</td>
+<td>1 – yes 0 – no</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">19</th>
 <td>Age at enrollment</td>
+<td>Age of studend at enrollment</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">20</th>
 <td>International</td>
+<td>1 – yes 0 – no</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">21</th>
 <td>Curricular units 1st sem (credited)</td>
+<td>Number of curricular units credited in the 1st...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">22</th>
 <td>Curricular units 1st sem (enrolled)</td>
+<td>Number of curricular units enrolled in the 1st...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">23</th>
 <td>Curricular units 1st sem (evaluations)</td>
+<td>Number of evaluations to curricular units in t...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">24</th>
 <td>Curricular units 1st sem (approved)</td>
+<td>Number of curricular units approved in the 1st...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">25</th>
 <td>Curricular units 1st sem (grade)</td>
+<td>Grade average in the 1st semester (between 0 a...</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">26</th>
 <td>Curricular units 1st sem (without evaluations)</td>
+<td>Number of curricular units without evalutions ...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">27</th>
 <td>Curricular units 2nd sem (credited)</td>
+<td>Number of curricular units credited in the 2nd...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">28</th>
 <td>Curricular units 2nd sem (enrolled)</td>
+<td>Number of curricular units enrolled in the 2nd...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">29</th>
 <td>Curricular units 2nd sem (evaluations)</td>
+<td>Number of evaluations to curricular units in t...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">30</th>
 <td>Curricular units 2nd sem (approved)</td>
+<td>Number of curricular units approved in the 2nd...</td>
 <td>Qualitativa</td>
 <td>Discreta</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">31</th>
 <td>Curricular units 2nd sem (grade)</td>
+<td>Grade average in the 2nd semester (between 0 a...</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">32</th>
 <td>Curricular units 2nd sem (without evaluations)</td>
+<td>Number of curricular units without evalutions ...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">33</th>
 <td>Unemployment rate</td>
+<td>Unemployment rate (%)</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">34</th>
 <td>Inflation rate</td>
+<td>Inflation rate (%)</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">35</th>
+<td>GDP</td>
 <td>GDP</td>
 <td>Quantitativa</td>
 <td>Contínua</td>
@@ -461,6 +527,7 @@ Tabela&nbsp;1: Dicionário das Variáveis
 <tr class="odd">
 <th data-quarto-table-cell-role="th">36</th>
 <td>Target</td>
+<td>Target. The problem is formulated as a three c...</td>
 <td>Qualitativa</td>
 <td>Nominal</td>
 </tr>
@@ -473,6 +540,89 @@ Tabela&nbsp;1: Dicionário das Variáveis
 </figure>
 </div>
 <a class="quarto-notebook-link" id="nblink-1" href="index-preview.html">Fonte: Caderno do Artigo</a></div>
+<p>Como medida descritiva, foi utilizada principalmente a dispersão para análise, devido a sua capacidade de destacar potenciais <em>outliers</em>, que no caso desse estudo, seriam estudantes de baixo e alto rendimento acadêmico.</p>
+<p>Como métodos estatísticos, foram aplicadas as medidas de tendência central para a análise das notas de qualificações prévias dos alunos. As medidas de tendência central incluem:</p>
+<ol class="example" type="1">
+<li><strong>Média</strong></li>
+</ol>
+<p>Dada por:</p>
+<p><span class="math display">\[
+\overline{X} = \frac{\sum_{i=1}^{N} x_{i}}{N}
+\]</span></p>
+<p>Onde:</p>
+<dl>
+<dt><span class="math inline">\(x_{i}\)</span></dt>
+<dd>
+Valor da observação <span class="math inline">\(i\)</span>.
+</dd>
+<dt><span class="math inline">\(N\)</span></dt>
+<dd>
+Número de observações da amostra.
+</dd>
+</dl>
+<ol start="2" class="example" type="1">
+<li><strong>Mediana</strong></li>
+</ol>
+<p>Dada por:</p>
+<p><span class="math display">\[
+M =
+\begin{cases}
+\frac{N}{2}, &amp; N = 2k \\
+\frac{N + 1}{2}, &amp; N = 2k + 1
+\end{cases}
+\]</span></p>
+<p>Onde:</p>
+<dl>
+<dt><span class="math inline">\(N\)</span></dt>
+<dd>
+Número de observações da amostra.
+</dd>
+</dl>
+<ol start="3" class="example" type="1">
+<li><strong>Moda</strong></li>
+</ol>
+<p>Geralmente é pensada como a observação de maior valor, mas podemos usar a <strong>Fórmula de King</strong> para calculá-la:</p>
+<p><span class="math display">\[
+M_{o} = L_{i} + \frac{n_{i} + 1}{n_{i} - 1 + n_{i} + 1} \cdot a_{i}
+\]</span></p>
+<p>Onde:</p>
+<dl>
+<dt><span class="math inline">\(L_{i}\)</span></dt>
+<dd>
+Limite inferior da classe modal.
+</dd>
+<dt><span class="math inline">\(n_{i} + 1\)</span></dt>
+<dd>
+Frequência absoluta da clase posterior à classe modal.
+</dd>
+<dt><span class="math inline">\(n_{i} - 1\)</span></dt>
+<dd>
+Frequência absoluta da classe anterior à classe modal.
+</dd>
+<dt><span class="math inline">\(a_{i}\)</span></dt>
+<dd>
+Amplitude da classe modal.
+</dd>
+</dl>
+<p>Além das medidas de tendência central, foi aplicada a medida de dispersão <strong>desvio padrão</strong> para identificar a variabilidade dos dados. Ela é dada por:</p>
+<p><span class="math display">\[
+DP = \sqrt{\frac{\sum_{i = 1}^{N} (x_{i} - \overline{X})^{2}}{N}}
+\]</span></p>
+<p>Onde:</p>
+<dl>
+<dt><span class="math inline">\(x_{i}\)</span></dt>
+<dd>
+Valor da observação <span class="math inline">\(i\)</span>.
+</dd>
+<dt>$</dt>
+<dd>
+Média das observações da amostra.
+</dd>
+<dt><span class="math inline">\(N\)</span></dt>
+<dd>
+Número de observações da amostra.
+</dd>
+</dl>
 <p>Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python <span class="citation" data-cites="python">(<a href="#ref-python" role="doc-biblioref">Python Software Foundation, 2025</a>)</span>. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.</p>
 <div id="tbl-libraries" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -527,45 +677,45 @@ Tabela&nbsp;3: Estatísticas Descritivas das Notas
 <style type="text/css">
 </style>
 
-<table id="T_691e2" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table id="T_93a7a" class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_691e2_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
+<th id="T_93a7a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th id="T_691e2_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
-<td id="T_691e2_row0_col0" class="data row0 col0">4424.00</td>
+<th id="T_93a7a_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
+<td id="T_93a7a_row0_col0" class="data row0 col0">4424.00</td>
 </tr>
 <tr class="even">
-<th id="T_691e2_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
-<td id="T_691e2_row1_col0" class="data row1 col0">132.61</td>
+<th id="T_93a7a_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
+<td id="T_93a7a_row1_col0" class="data row1 col0">132.61</td>
 </tr>
 <tr class="odd">
-<th id="T_691e2_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
-<td id="T_691e2_row2_col0" class="data row2 col0">13.19</td>
+<th id="T_93a7a_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
+<td id="T_93a7a_row2_col0" class="data row2 col0">13.19</td>
 </tr>
 <tr class="even">
-<th id="T_691e2_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
-<td id="T_691e2_row3_col0" class="data row3 col0">95.00</td>
+<th id="T_93a7a_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
+<td id="T_93a7a_row3_col0" class="data row3 col0">95.00</td>
 </tr>
 <tr class="odd">
-<th id="T_691e2_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
-<td id="T_691e2_row4_col0" class="data row4 col0">125.00</td>
+<th id="T_93a7a_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
+<td id="T_93a7a_row4_col0" class="data row4 col0">125.00</td>
 </tr>
 <tr class="even">
-<th id="T_691e2_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
-<td id="T_691e2_row5_col0" class="data row5 col0">133.10</td>
+<th id="T_93a7a_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
+<td id="T_93a7a_row5_col0" class="data row5 col0">133.10</td>
 </tr>
 <tr class="odd">
-<th id="T_691e2_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
-<td id="T_691e2_row6_col0" class="data row6 col0">140.00</td>
+<th id="T_93a7a_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
+<td id="T_93a7a_row6_col0" class="data row6 col0">140.00</td>
 </tr>
 <tr class="even">
-<th id="T_691e2_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
-<td id="T_691e2_row7_col0" class="data row7 col0">190.00</td>
+<th id="T_93a7a_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
+<td id="T_93a7a_row7_col0" class="data row7 col0">190.00</td>
 </tr>
 </tbody>
 </table>
@@ -646,7 +796,7 @@ Figura&nbsp;3: Taxa de Evasão por Situação de Dívida
 <section id="gabriel-santos-de-souza" class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="gabriel-santos-de-souza"><span class="header-section-number">6.1</span> Gabriel Santos de Souza</h3>
 <p>Já havia previamente trabalhado com Python <span class="citation" data-cites="python">(<a href="#ref-python" role="doc-biblioref">Python Software Foundation, 2025</a>)</span> e CSV <span class="citation" data-cites="shafranovich2005common">(<a href="#ref-shafranovich2005common" role="doc-biblioref">Shafranovich, 2005</a>)</span> na disciplina <em>Métodos e Técnicas de Pesquisa para Computação</em> (MTPC) então, em quesito de linguagem, não tive complicação.</p>
-<p>A novidade foi mexer com o Pandas <span class="citation" data-cites="the_pandas_development_team_2026_18328522">(<a href="#ref-the_pandas_development_team_2026_18328522" role="doc-biblioref">Pandas Team, 2026</a>)</span>, matplotlib <span class="citation" data-cites="MatplotlibPythonPlotting">(<a href="#ref-MatplotlibPythonPlotting" role="doc-biblioref"><span>«Matplotlib»</span>, <em>[S.d.]</em></a>)</span> e o Numpy <span class="citation" data-cites="harris2020array">(<a href="#ref-harris2020array" role="doc-biblioref">Harris et al., 2020</a>)</span>, pois em MTPC eu utilizei a biblioteca Polars <span class="citation" data-cites="PolarsBlazinglyFast">(<a href="#ref-PolarsBlazinglyFast" role="doc-biblioref"><span>«Polars»</span>, <em>[S.d.]</em></a>)</span> para análise dos dados e o Altair <span class="citation" data-cites="VanderPlas2018">(<a href="#ref-VanderPlas2018" role="doc-biblioref">VanderPlas et al., 2018</a>)</span> para geração dos gráficos. Foi também uma ótima oportunidade de experimentar o Quarto <span class="citation" data-cites="quarto">(<a href="#ref-quarto" role="doc-biblioref">Allaire et al., 2026</a>)</span> como sucessor do R Markdown <span class="citation" data-cites="RmarkdownDynamicDocuments2025">(<a href="#ref-RmarkdownDynamicDocuments2025" role="doc-biblioref">Rmarkdown, 2025</a>)</span>.</p>
+<p>A novidade foi mexer com o Pandas <span class="citation" data-cites="the_pandas_development_team_2026_18328522">(<a href="#ref-the_pandas_development_team_2026_18328522" role="doc-biblioref">Pandas Team, 2026</a>)</span>, Matplotlib <span class="citation" data-cites="MatplotlibPythonPlotting">(<a href="#ref-MatplotlibPythonPlotting" role="doc-biblioref"><span>«Matplotlib»</span>, <em>[S.d.]</em></a>)</span> e o NumPy <span class="citation" data-cites="harris2020array">(<a href="#ref-harris2020array" role="doc-biblioref">Harris et al., 2020</a>)</span>, pois em MTPC eu utilizei a biblioteca Polars <span class="citation" data-cites="PolarsBlazinglyFast">(<a href="#ref-PolarsBlazinglyFast" role="doc-biblioref"><span>«Polars»</span>, <em>[S.d.]</em></a>)</span> para análise dos dados e o Altair <span class="citation" data-cites="VanderPlas2018">(<a href="#ref-VanderPlas2018" role="doc-biblioref">VanderPlas et al., 2018</a>)</span> para geração dos gráficos. Foi também uma ótima oportunidade de experimentar o Quarto <span class="citation" data-cites="quarto">(<a href="#ref-quarto" role="doc-biblioref">Allaire et al., 2026</a>)</span> como sucessor do R Markdown <span class="citation" data-cites="RmarkdownDynamicDocuments2025">(<a href="#ref-RmarkdownDynamicDocuments2025" role="doc-biblioref">Rmarkdown, 2025</a>)</span>.</p>
 <p>Em relação aos dados em si, achei interessante como justificativas socioeconômicas se aplicam independentemente do país.</p>
 </section>
 <section id="tarcisio-almeida-mascarenhas" class="level3" data-number="6.2">
