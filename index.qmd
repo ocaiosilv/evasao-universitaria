@@ -5,18 +5,17 @@ title: Análise de Evasão Universitária
 
 ```{python}
 #| include: false
-#| label: imports
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from scipy.stats import chi2_contingency
 from ucimlrepo import fetch_ucirepo
 ```
 
 ```{python}
 #| include: false
-#| label: variables
 
 # Dataset.
 ds = fetch_ucirepo(id=697)
@@ -164,11 +163,32 @@ Onde:
 $x_{i}$
 : Valor da observação $i$.
 
-$\overline{X}
+$\overline{X}$
 : Média das observações da amostra.
 
 $N$
 : Número de observações da amostra.
+
+Para o teste de hipótese foi utilizado o Teste Qui-Quadrado de Independência [@pearsonCriterionThatGiven1900].
+
+(@) **Teste Qui-Quadrado de Independência**
+
+Teste estatístico aplicado a dados qualitativos para avaliar a probabilidade da diferença entre conjuntos surgiu por chance. É dado por:
+
+$$
+\chi^{2} = \sum^{n}_{i = 1} \frac{(O_{i} - E_{i})^{2}}{E_{i}}
+$$
+
+Onde:
+
+$O_{i}$
+: Número de observações do tipo $i$.
+
+$n$
+: Número de obsevações da amostra.
+
+$E_{i}$
+: Valor esperado de $i$.
 
 Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python [@python]. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.
 
@@ -269,7 +289,7 @@ tabela_contingencia = pd.crosstab(df['Debtor'], df['Target'])
 chi2, p_valor, graus_liberdade, frequencias_esperadas = chi2_contingency(tabela_contingencia)
 ```
 
-Das figuras acima, uma das mais chamativas é o gráfico de barras @fig-bar-divida, pois parece indicar uma relação entre dívida e persistência. Para análise de correlação, podemos investigar a seguinte hipótese nula ($H_{0}$): "Estar em dívida não afeta a desistência do curso". Mediante um **Teste Qui-Quadrado de Independência**, descobrimos que o *valor-p* de $H_{0}$ é `{python} p_valor`, que é menor que 5%. Logo, podemos rejeitar a hipótese nula, o que pode indicar uma hipótese alternativa ($H_{1}$) de que estar individado afeta a desistência do curso.
+Das figuras acima, uma das mais chamativas é o gráfico de barras @fig-bar-divida, pois parece indicar uma relação entre dívida e persistência. Para análise de correlação, podemos investigar a seguinte hipótese nula ($H_{0}$): "Estar em dívida não afeta a desistência do curso". Mediante um **Teste Qui-Quadrado de Independência**, descobrimos que o *valor-p* de $H_{0}$ é aproximadamente `{python} f"{p_valor}"`, que é menor que 5% (0.05). Logo, podemos rejeitar a hipótese nula, o que pode indicar uma hipótese alternativa ($H_{1}$) de que estar individado afeta a desistência do curso.
 
 ## Conclusão
 
