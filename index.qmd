@@ -42,6 +42,7 @@ Para alcançar este propósito, definiram-se os seguintes objetivos específicos
 2. **Visualizar:** Construir representações gráficas, como histogramas e *boxplots*, para facilitar a interpretação da distribuição das idades e notas dos alunos.
 3. **Identificar Anomalias:** Detectar a presença de *outliers* (valores atípicos) nas notas de ingresso, investigando a existência de grupos com desempenho discrepante da maioria.
 4. **Caracterizar:** Descrever a natureza das variáveis disponíveis no banco de dados, classificando-as conforme seus tipos e escalas para fundamentar a escolha das técnicas estatísticas aplicadas.
+5. **Analizar:** Buscar um fator em potencial que pode influenciar na desistência dos discentes, assim auxiliando a pesquisa de métodos combativos da desistência estudantil.
 
 ## Materiais e Métodos
 
@@ -171,12 +172,13 @@ $N$
 
 Para o processamento e análise dos dados mediante gráficos, foi utilizada a linguagem de programação Python [@python]. A tabela a seguir detalha as bibliotecas usadas, e suas utilidades.
 
-| Biblioteca                                          | Função                                                                           |
-|-----------------------------------------------------|----------------------------------------------------------------------------------|
-| matplotlib [@MatplotlibPythonPlotting]              | Gerar gráficos a partir dos dados.                                               |
-| pandas [@the_pandas_development_team_2026_18328522] | Manipular o *dataset*.                                                           |
-| ucimlrepo [@UcimlrepoPackageEasily]                 | Baixar o *dataset* pronto para manipulação do *UCI Machine Learning Repository*. |
-| numpy [@harris2020array]                            | Análise de tipos de dados.                                                       |
+| Biblioteca                                            | Função                                                                           |
+|-------------------------------------------------------|----------------------------------------------------------------------------------|
+| `matplotlib` [@MatplotlibPythonPlotting]              | Gerar gráficos a partir dos dados.                                               |
+| `pandas` [@the_pandas_development_team_2026_18328522] | Manipular o *dataset*.                                                           |
+| `ucimlrepo` [@UcimlrepoPackageEasily]                 | Baixar o *dataset* pronto para manipulação do *UCI Machine Learning Repository*. |
+| `numpy` [@harris2020array]                            | Análise de tipos de dados.                                                       |
+| `scipy` [@virtanenSciPy10Fundamental2020]             | Cálculo do Teste Qui-Quadrado de Independência [@pearsonCriterionThatGiven1900]. |
 
 : Bibliotecas Utilizadas {#tbl-libraries}
 
@@ -257,6 +259,18 @@ Com base na @tbl-estatisticas, observamos que a nota média de qualificação pr
 
 Entretanto, o **Boxplot (@fig-boxplot-notas)** revela a presença clara de **outliers** (valores atípicos). Notamos um grupo de alunos com notas excepcionalmente altas (acima de 160) e outro com notas muito baixas (abaixo de 100). Esses pontos discrepantes sugerem que o nível de preparo prévio dos alunos é bastante heterogêneo.
 
+### Análise de Hipótese
+
+```{python}
+#| include: false
+
+tabela_contingencia = pd.crosstab(df['Debtor'], df['Target'])
+# Teste Qui-Quadrado.
+chi2, p_valor, graus_liberdade, frequencias_esperadas = chi2_contingency(tabela_contingencia)
+```
+
+Das figuras acima, uma das mais chamativas é o gráfico de barras @fig-bar-divida, pois parece indicar uma relação entre dívida e persistência. Para análise de correlação, podemos investigar a seguinte hipótese nula ($H_{0}$): "Estar em dívida não afeta a desistência do curso". Mediante um **Teste Qui-Quadrado de Independência**, descobrimos que o *valor-p* de $H_{0}$ é `{python} p_valor`, que é menor que 5%. Logo, podemos rejeitar a hipótese nula, o que pode indicar uma hipótese alternativa ($H_{1}$) de que estar individado afeta a desistência do curso.
+
 ## Conclusão
 
 A análise estatística descritiva realizada sobre o banco de dados *Predict Students' Dropout and Academic Success* permitiu uma compreensão detalhada da dinâmica de evasão na instituição estudada. O perfil acadêmico de ingresso, sintetizado pela nota média de **132,6 pontos**, revela um cenário de equilíbrio central, mas que é fortemente impactado pela presença de *outliers* (valores atípicos) em ambas as extremidades da escala.
@@ -277,6 +291,10 @@ Além disso, a comparação das notas do primeiro semestre mostrou que os alunos
 Ao correlacionar as dimensões analisadas, observa-se a formação de um "efeito cascata" que potencializa a vulnerabilidade do discente. O aluno que ingressa com notas de qualificação mais baixas (preparo prévio deficitário) frequentemente enfrenta maiores obstáculos pedagógicos, o que se traduz em notas insatisfatórias logo no primeiro semestre. Quando esse quadro de dificuldade acadêmica é agravado pela situação de endividamento, a evasão deixa de ser uma possibilidade e torna-se um desfecho provável. A pressão financeira força o estudante a priorizar atividades remuneradas em detrimento do tempo de estudo, impedindo a recuperação de suas notas e criando um ciclo onde a insuficiência acadêmica e a fragilidade econômica se retroalimentam. Portanto, a análise revela que o risco de desistência não é fruto de um evento isolado, mas da convergência entre um histórico escolar prévio heterogêneo, um desempenho inicial abaixo da média e a barreira socioeconômica da dívida ativa.
 
 Em suma, este trabalho cumpriu o objetivo de resumir e organizar os dados, estabelecendo uma base empírica sólida para que a instituição possa validar a qualidade de suas estratégias de retenção e orientar futuras decisões metodológicas mais complexas.
+
+### Teste de Hipótese
+
+Mediante análise do gráfico de barras (@fig-bar-divida) e execução do teste de hipótese nula, observa-se a dívida como um importante fator na desistência de um estudante. De fato, dívida é um grande fator de estresse [@dodamaniMultifacetedImpactFinancial2024], o que pode desestabilizar o discente.
 
 ## Relato Pessoal
 
