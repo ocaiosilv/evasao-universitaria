@@ -25,7 +25,9 @@ df = ds.data.original
 
 ## Introdução
 
-A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Compreender os fatores que levam um aluno a abandonar o curso ou a obter sucesso acadêmico é fundamental para a elaboração de políticas de retenção e suporte educacional mais eficazes.
+A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Segundo o modelo de integração estudantil de Tinto (1975), a decisão de abandonar o curso raramente é isolada, sendo fruto de uma interação dinâmica entre as características do indivíduo e o ambiente acadêmico.
+
+Compreender esses fatores é fundamental, especialmente em um cenário onde as taxas de desistência no ensino superior permanecem alarmantes. No Brasil, por exemplo, dados recentes apontam que a taxa de evasão acumulada pode ultrapassar 50% em diversos cursos, gerando grandes perdas sociais e econômicas (INEP, 2022)
 
 Neste trabalho, investigamos o problema da desistência no ensino superior utilizando dados reais. A análise se justifica pela necessidade de identificar padrões ocultos que possam sinalizar, precocemente, estudantes em situação de risco.
 
@@ -331,5 +333,10 @@ Em relação aos dados em si, achei interessante como justificativas socioeconô
 Uma das dificuldades que tive foi a de executar o código, tive alguns problemas com o Python [@python] no R Studio [@rstudio2026], mas consegui resolver depois de algum tempo. Outra dificuldade seria escolher exatamente quais parâmetros usar dentre todos que existem no banco de dados já que uma grande parte deles se complementam entre si, então escolher quais filtrar para podermos provar o nosso ponto sobre o assunto foi bastante interessante de se pensar.
 
 Das novidades, uma delas foi mexer com Python [@python] e o R Studio [@rstudio2026], coisa que eu nunca tinha feito e achei bastante interessante a sinergia entre os dois, e a possibilidade de criar documentos como esse sem precisar ficar mudando de aplicativo durante a criação foi bem interessante, também achei bem legal a forma como a estatística e o senso comum andaram lado a lado nesse trabalho mostrando assim que ela também serve para provarmos aquilo que já sabemos de forma empírica, porém não temos dados para comprovar. Além disso, o fato das justificativas socioeconômicas se aplicarem tanto ao Brasil quanto a Portugal, países completamente diferentes em cultura, geografia, economia e desenvolvimento demonstra a possibilidade da situação analisada ser igual para o mundo todo.
+
+### Renato Vasconcelos Campos Filho
+A experiência de desenvolver este projeto foi marcada por um contraste entre o desafio instrumental e a satisfação analítica. A principal dificuldade que enfrentei concentrou-se na utilização das ferramentas, especificamente na gestão de ambientes e bibliotecas do Python (Python Software Foundation, 2025) e na renderização do documento final com o Quarto (Allaire et al., 2026). A curva de aprendizado para configurar as dependências corretamente e integrar o código à narrativa textual foi mais íngreme do que eu esperava.
+
+Apesar dos obstáculos técnicos com a linguagem de programação, o trabalho com os métodos estatísticos foi o ponto alto da atividade. Foi muito gratificante aplicar a teoria na prática e ver como a estatística oferece ferramentas robustas para interpretar a realidade dos dados. A complexidade do código acabou servindo para valorizar ainda mais os resultados obtidos, reforçando a importância da persistência técnica para se alcançar uma análise de dados fundamentada.
 
 ## Referências {.unnumbered}
