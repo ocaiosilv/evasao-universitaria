@@ -307,7 +307,7 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-     <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="24397411" class="cell" data-execution_count="1">
+     <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="4963880c" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -315,13 +315,13 @@
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2_contingency</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ucimlrepo <span class="im">import</span> fetch_ucirepo</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="0a5fe859" class="cell" data-execution_count="2">
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="2ba004bb" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset.</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> fetch_ucirepo(<span class="bu">id</span><span class="op">=</span><span class="dv">697</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># DataFrame.</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> ds.data.original</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
-<div id="fd83caf9" class="cell markdown">
+<div id="f348842e" class="cell markdown">
 <section id="introdução" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introdução"><span class="header-section-number">1</span> Introdução</h2>
 <p>A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Segundo o modelo de integração estudantil de <span class="citation" data-cites="tinto1975">Tinto (<a href="#ref-tinto1975" role="doc-biblioref">1975</a>)</span>, a decisão de abandonar o curso raramente é isolada, sendo fruto de uma interação dinâmica entre as características do indivíduo e o ambiente acadêmico.</p>
@@ -676,7 +676,7 @@ Tabela&nbsp;1: Dicionário das Variáveis
 </figure>
 </div></div>
 </div></div>
-<div id="03d5fb79" class="cell markdown">
+<div id="07240e6d" class="cell markdown">
 <p>Como medida descritiva, foi utilizada principalmente a dispersão para análise, devido a sua capacidade de destacar potenciais <em>outliers</em>, que no caso desse estudo, seriam estudantes de baixo e alto rendimento acadêmico.</p>
 <p>Como métodos estatísticos, foram aplicadas as medidas de tendência central para a análise das notas de qualificações prévias dos alunos. As medidas de tendência central incluem:</p>
 <ol class="example" type="1">
@@ -847,45 +847,45 @@ Tabela&nbsp;3: Estatísticas Descritivas das Notas
 <style type="text/css">
 </style>
 
-<table id="T_6e23e" class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table id="T_5d967" class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
-<th id="T_6e23e_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
+<th id="T_5d967_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Previous qualification (grade)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<th id="T_6e23e_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
-<td id="T_6e23e_row0_col0" class="data row0 col0">4424.00</td>
+<th id="T_5d967_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">count</th>
+<td id="T_5d967_row0_col0" class="data row0 col0">4424.00</td>
 </tr>
 <tr class="even">
-<th id="T_6e23e_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
-<td id="T_6e23e_row1_col0" class="data row1 col0">132.61</td>
+<th id="T_5d967_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">mean</th>
+<td id="T_5d967_row1_col0" class="data row1 col0">132.61</td>
 </tr>
 <tr class="odd">
-<th id="T_6e23e_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
-<td id="T_6e23e_row2_col0" class="data row2 col0">13.19</td>
+<th id="T_5d967_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">std</th>
+<td id="T_5d967_row2_col0" class="data row2 col0">13.19</td>
 </tr>
 <tr class="even">
-<th id="T_6e23e_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
-<td id="T_6e23e_row3_col0" class="data row3 col0">95.00</td>
+<th id="T_5d967_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">min</th>
+<td id="T_5d967_row3_col0" class="data row3 col0">95.00</td>
 </tr>
 <tr class="odd">
-<th id="T_6e23e_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
-<td id="T_6e23e_row4_col0" class="data row4 col0">125.00</td>
+<th id="T_5d967_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">25%</th>
+<td id="T_5d967_row4_col0" class="data row4 col0">125.00</td>
 </tr>
 <tr class="even">
-<th id="T_6e23e_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
-<td id="T_6e23e_row5_col0" class="data row5 col0">133.10</td>
+<th id="T_5d967_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">50%</th>
+<td id="T_5d967_row5_col0" class="data row5 col0">133.10</td>
 </tr>
 <tr class="odd">
-<th id="T_6e23e_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
-<td id="T_6e23e_row6_col0" class="data row6 col0">140.00</td>
+<th id="T_5d967_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">75%</th>
+<td id="T_5d967_row6_col0" class="data row6 col0">140.00</td>
 </tr>
 <tr class="even">
-<th id="T_6e23e_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
-<td id="T_6e23e_row7_col0" class="data row7 col0">190.00</td>
+<th id="T_5d967_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">max</th>
+<td id="T_5d967_row7_col0" class="data row7 col0">190.00</td>
 </tr>
 </tbody>
 </table>
@@ -976,7 +976,7 @@ Figura&nbsp;3: Taxa de Evasão por Situação de Dívida
 </div>
 </div>
 </div></div>
-<div id="13f9d910" class="cell markdown">
+<div id="bd6c8c0b" class="cell markdown">
 <section id="análise-dos-resultados" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="análise-dos-resultados"><span class="header-section-number">4.1</span> Análise dos Resultados</h3>
 <p>Com base na <a href="#tbl-estatisticas" class="quarto-xref">Tabela&nbsp;3</a>, observamos que a nota média de qualificação prévia dos alunos é de aproximadamente <strong>132,6 pontos</strong>, com uma mediana muito próxima (<strong>133,1</strong>), o que indica uma distribuição relativamente simétrica.</p>
@@ -986,12 +986,12 @@ Figura&nbsp;3: Taxa de Evasão por Situação de Dívida
 <h3 data-number="4.2" class="anchored" data-anchor-id="análise-de-hipótese"><span class="header-section-number">4.2</span> Análise de Hipótese</h3>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [8]:</pre></div><div id="d97f6df4" class="cell" data-execution_count="8">
+<div class="cell-container"><div class="cell-decorator"><pre>In [8]:</pre></div><div id="9122fac5" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tabela_contingencia <span class="op">=</span> pd.crosstab(df[<span class="st">'Debtor'</span>], df[<span class="st">'Target'</span>])</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Teste Qui-Quadrado.</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>chi2, p_valor, graus_liberdade, frequencias_esperadas <span class="op">=</span> chi2_contingency(tabela_contingencia)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
-<div id="3df8dea5" class="cell markdown">
+<div id="bcd80fbb" class="cell markdown">
 <p>Das figuras acima, uma das mais chamativas é o gráfico de barras <a href="#fig-bar-divida" class="quarto-xref">Figura&nbsp;3</a>, pois parece indicar uma relação entre dívida e persistência. Para análise de correlação, podemos investigar a seguinte hipótese nula (<span class="math inline">\(H_{0}\)</span>): “Estar em dívida não afeta a desistência do curso”. Mediante um <strong>Teste Qui-Quadrado de Independência</strong>, descobrimos que o <em>valor-p</em> de <span class="math inline">\(H_{0}\)</span> é aproximadamente 4.858552123231672e-57, que é menor que 5% (0.05). Logo, podemos rejeitar a hipótese nula, o que pode indicar uma hipótese alternativa (<span class="math inline">\(H_{1}\)</span>) de que estar individado afeta a desistência do curso.</p>
 <section id="conclusão" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="conclusão"><span class="header-section-number">5</span> Conclusão</h2>
@@ -1036,7 +1036,7 @@ Figura&nbsp;3: Taxa de Evasão por Situação de Dívida
 </section>
 <section id="caio-aloisio-andrade-silva" class="level3" data-number="6.4">
 <h3 data-number="6.4" class="anchored" data-anchor-id="caio-aloisio-andrade-silva"><span class="header-section-number">6.4</span> Caio Aloisio Andrade Silva</h3>
-<p>O desenvolvimento deste projeto foi uma experiência muito positiva, apesar de alguns desafios. Tive algumas dificuldades pontuais na execução do código e na configuração do ambiente, especialmente o Pandas ao fluxo ao usar o QUARTO (Allaire et al., 2026) do trabalho, mas com ajuda do grupo foi possível passar por cima desse empecilho. Achei especialmente interessante que consegui aplicar conhecimento que antes havia usado apenas em projetos pessoais em um contexto acadêmico e avaliativo. O trabalho em grupo também foi um ponto forte, com boa comunicação entre os integrantes, e o projeto contribuiu para que eu enxergasse a estatística para além de uma disciplina do curso, mostrando sua relação com a área em que pretendo atuar.</p>
+<p>O desenvolvimento deste projeto foi uma experiência muito positiva, apesar de alguns desafios. Tive algumas dificuldades pontuais na execução do código e na configuração do ambiente, especialmente o Pandas ao fluxo ao usar o Quarto <span class="citation" data-cites="rstudio2026">(<a href="#ref-rstudio2026" role="doc-biblioref">Posit team, 2026</a>)</span> do trabalho, mas com ajuda do grupo foi possível passar por cima desse empecilho. Achei especialmente interessante que consegui aplicar conhecimento que antes havia usado apenas em projetos pessoais em um contexto acadêmico e avaliativo. O trabalho em grupo também foi um ponto forte, com boa comunicação entre os integrantes, e o projeto contribuiu para que eu enxergasse a estatística para além de uma disciplina do curso, mostrando sua relação com a área em que pretendo atuar.</p>
 </section>
 </section>
 <section id="referências" class="level2 unnumbered">
