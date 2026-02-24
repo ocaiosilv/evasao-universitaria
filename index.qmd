@@ -25,9 +25,9 @@ df = ds.data.original
 
 ## Introdução
 
-A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Segundo o modelo de integração estudantil de Tinto (1975), a decisão de abandonar o curso raramente é isolada, sendo fruto de uma interação dinâmica entre as características do indivíduo e o ambiente acadêmico.
+A evasão universitária é um fenômeno complexo que impacta tanto as instituições de ensino quanto a trajetória profissional dos estudantes. Segundo o modelo de integração estudantil de @tinto1975, a decisão de abandonar o curso raramente é isolada, sendo fruto de uma interação dinâmica entre as características do indivíduo e o ambiente acadêmico.
 
-Compreender esses fatores é fundamental, especialmente em um cenário onde as taxas de desistência no ensino superior permanecem alarmantes. No Brasil, por exemplo, dados recentes apontam que a taxa de evasão acumulada pode ultrapassar 50% em diversos cursos, gerando grandes perdas sociais e econômicas (INEP, 2022)
+Compreender esses fatores é fundamental, especialmente em um cenário onde as taxas de desistência no ensino superior permanecem alarmantes. No Brasil, por exemplo, dados recentes apontam que a taxa de evasão acumulada pode ultrapassar 50% em diversos cursos, gerando grandes perdas sociais e econômicas [@inep2022].
 
 Neste trabalho, investigamos o problema da desistência no ensino superior utilizando dados reais. A análise se justifica pela necessidade de identificar padrões ocultos que possam sinalizar, precocemente, estudantes em situação de risco.
 
