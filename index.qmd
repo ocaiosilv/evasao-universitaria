@@ -339,4 +339,8 @@ A experiência de desenvolver este projeto foi marcada por um contraste entre o 
 
 Apesar dos obstáculos técnicos com a linguagem de programação, o trabalho com os métodos estatísticos foi o ponto alto da atividade. Foi muito gratificante aplicar a teoria na prática e ver como a estatística oferece ferramentas robustas para interpretar a realidade dos dados. A complexidade do código acabou servindo para valorizar ainda mais os resultados obtidos, reforçando a importância da persistência técnica para se alcançar uma análise de dados fundamentada.
 
+### Caio Aloisio Andrade Silva
+
+O desenvolvimento deste projeto foi uma experiência muito positiva, apesar de alguns desafios. Tive algumas dificuldades pontuais na execução do código e na configuração do ambiente, especialmente o Pandas ao fluxo ao usar o QUARTO (Allaire et al., 2026) do trabalho, mas com ajuda do grupo foi possível passar por cima desse empecilho. Achei especialmente interessante que consegui aplicar conhecimento que antes havia usado apenas em projetos pessoais em um contexto acadêmico e avaliativo. O trabalho em grupo também foi um ponto forte, com boa comunicação entre os integrantes, e o projeto contribuiu para que eu enxergasse a estatística para além de uma disciplina do curso, mostrando sua relação com a área em que pretendo atuar.
+
 ## Referências {.unnumbered}
