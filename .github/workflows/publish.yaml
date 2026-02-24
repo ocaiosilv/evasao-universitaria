@@ -26,10 +26,8 @@ jobs:
         run: |
           pip install -r requirements.txt
       - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b
+        uses: gbr-ufs/quarto-actions/publish@5fb90da8ccd29579fa54dcd174e21b5b79f5c466
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Add missing file for PDF link
-        run: cp index-preview.html index.qmd.html
